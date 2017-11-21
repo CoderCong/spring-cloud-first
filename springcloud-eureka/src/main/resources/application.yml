@@ -1,0 +1,25 @@
+server:
+  port: 6868
+
+
+eureka:
+  client:
+    register-with-eureka: false              #是否将自己注册到Eureka服务中，默认为true
+    fetch-registry: false                     #是否从Eureka中获取注册信息，默认为true
+    service-url:                              #Eureka客户端与Eureka服务端进行交互的地址
+      defaultZone: http://yicong:password@127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true    #将自己的ip地址注册到Eureka服务中
+   # instance-id: ${spring.application.name}:${server.port} 一般不需要
+  server:
+    enable-self-preservation: false
+security:
+  basic:
+    enabled: false
+  user:
+    name: yicong
+    password: password
+spring:
+  application:
+    name: springcloud-eureka
+

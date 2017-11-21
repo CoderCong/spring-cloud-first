@@ -1,0 +1,24 @@
+server:
+  port: 8082
+
+com.cong:
+  item:
+    url: http://127.0.0.1:8081/item/
+
+spring:
+  application:
+    name: springcloud-order
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true
+
+#选择负载均衡的策略
+springcloud-item:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
