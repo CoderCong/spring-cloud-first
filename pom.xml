@@ -13,6 +13,7 @@
         <module>springcloud-order</module>
         <module>springcloud-eureka</module>
         <module>springcloud-api-gateway</module>
+        <module>springcloud-config-server</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

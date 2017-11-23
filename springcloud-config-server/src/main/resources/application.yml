@@ -1,0 +1,15 @@
+server:
+  port: 6688
+
+
+spring:
+  application:
+    name: springcloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/CoderCong/spring-cloud-first.git
+#          username:
+#          password:
+
