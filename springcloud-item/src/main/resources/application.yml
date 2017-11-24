@@ -13,3 +13,6 @@ eureka:
 spring:
   application:
     name: springcloud-item
+management:
+  security:
+    enabled: false
