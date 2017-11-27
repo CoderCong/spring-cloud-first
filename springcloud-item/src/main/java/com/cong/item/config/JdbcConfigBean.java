@@ -2,7 +2,6 @@ package com.cong.item.config;
 
 import lombok.ToString;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,7 +10,7 @@ import org.springframework.stereotype.Component;
  */
 @ToString
 @Component
-@RefreshScope
+//@RefreshScope
 public class JdbcConfigBean {
 
     @Value("${jdbc.url}")

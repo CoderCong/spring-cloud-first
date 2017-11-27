@@ -1,6 +1,9 @@
 package com.cong.item.service;
 
+import com.cong.item.dao.ItemMapper;
 import com.cong.item.pojo.Item;
+import com.netflix.discovery.converters.Auto;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -13,6 +16,9 @@ import java.util.Map;
 @Service
 public class ItemService {
     private static final Map<Long, Item> MAP = new HashMap<>();
+
+    @Autowired
+    private ItemMapper itemMapper;
 
     static {
         MAP.put(1L, new Item(1L, "商品标题1", "http://图片1", "商品描述1", 1000L));
@@ -32,7 +38,11 @@ public class ItemService {
      * @return
      */
     public Item queryItemById(Long id) {
-        return MAP.get(id);
+
+///       不使用数据库查询
+//        return MAP.get(id);
+
+        return itemMapper.findItemById(id);
     }
 
 }

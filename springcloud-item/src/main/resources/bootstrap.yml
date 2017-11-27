@@ -5,10 +5,3 @@ spring:
       uri: http://127.0.0.1:6688/
       profile: dev
       label: master
-      discovery:
-        enabled: true
-        service-id: springcloud-config-server
-eureka:
-  client:
-    serviceUrl: #Eureka客户端与Eureka服务端进行交互的地址
-      defaultZone: http://127.0.0.1:6868/eureka/
